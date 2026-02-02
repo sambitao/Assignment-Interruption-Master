@@ -1,7 +1,12 @@
 // === GLOBAL VARIABLES & CONFIG ===
 // NOTE: Replace these with your actual Firebase config if not using environment variables
-const firebaseConfig = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : {
-    // Paste your Firebase Config Object here
+const firebaseConfig = {
+  apiKey: "AIzaSyBZVvsZcsdrCDYb5JqiZFLaN52hjUi_Arw",
+  authDomain: "assignment-interruption-e9481.firebaseapp.com",
+  projectId: "assignment-interruption-e9481",
+  storageBucket: "assignment-interruption-e9481.firebasestorage.app",
+  messagingSenderId: "246855027730",
+  appId: "1:246855027730:web:a61bd1dcb9e103c3cc9ccb"
 };
 
 const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-app-id';
