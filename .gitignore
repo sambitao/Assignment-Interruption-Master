@@ -1,0 +1,22 @@
+System Files
+
+.DS_Store
+Thumbs.db
+desktop.ini
+
+Logs
+
+.log
+npm-debug.log
+
+Editor directories
+
+.idea/
+.vscode/
+*.swp
+*.swo
+
+Dependencies (เผื่อในอนาคตมีการใช้ npm)
+
+node_modules/
+dist/
