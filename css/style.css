@@ -1,0 +1,42 @@
+body { font-family: 'Prompt', sans-serif; background-color: #f8fafc; }
+.submenu { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; }
+.submenu.open { max-height: 500px; transition: max-height 0.5s ease-in; }
+.status-badge { @apply px-2.5 py-0.5 text-xs rounded-full font-bold border whitespace-nowrap uppercase tracking-wider; }
+.rr-box { @apply border border-orange-200 rounded-xl p-4 bg-orange-50 mb-6 shadow-sm relative; }
+.rr-label { @apply text-xs font-bold text-gray-500 uppercase tracking-wider mb-1; }
+.rr-value { @apply font-bold text-gray-800 text-lg; }
+input:disabled, select:disabled, textarea:disabled { background-color: #f3f4f6; color: #9ca3af; cursor: not-allowed; }
+.other-input { display: none; margin-top: 0.5rem; }
+.other-input.show { display: block; animation: fadeIn 0.3s; }
+.indicator { width: 8px; height: 8px; border-radius: 50%; display: inline-block; margin-right: 6px; }
+.indicator.loading { background-color: #fbbf24; animation: pulse 1.5s infinite; }
+.indicator.online { background-color: #22c55e; box-shadow: 0 0 5px #22c55e; }
+.indicator.error { background-color: #ef4444; }
+.calendar-day:hover { transform: translateY(-2px); z-index: 10; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); cursor: pointer; border-color: #f97316; }
+.custom-scrollbar::-webkit-scrollbar { width: 4px; }
+.custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+.custom-scrollbar::-webkit-scrollbar-thumb { background-color: #cbd5e1; border-radius: 2px; }
+.transition-all { transition-property: all; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 200ms; }
+
+.select2-container .select2-selection--multiple { min-height: 42px; border: 1px solid #d1d5db; border-radius: 0.5rem; padding: 4px; }
+.select2-container--default .select2-selection--multiple .select2-selection__choice { background-color: #ffedd5; border: 1px solid #fed7aa; border-radius: 0.25rem; color: #c2410c; padding: 0 4px; margin-top: 4px; }
+.select2-container--default .select2-selection--multiple .select2-selection__choice__remove { color: #c2410c; margin-right: 5px; }
+.select2-container--default.select2-container--focus .select2-selection--multiple { border-color: #f97316; box-shadow: 0 0 0 1px #f97316; }
+
+@keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.5; } 100% { opacity: 1; } }
+
+/* Print Styling */
+@media print {
+    #sidebar, header, #sidebar-overlay, .print-hide { display: none !important; }
+    body, html, main, #content-container, .view-section { 
+        height: auto !important; 
+        overflow: visible !important; 
+        background-color: white !important;
+        width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+    canvas { max-width: 100% !important; height: auto !important; }
+    .break-inside-avoid { break-inside: avoid; }
+}
